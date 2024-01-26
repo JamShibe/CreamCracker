@@ -20,5 +20,8 @@ if(move_amount <= 0) {
 			show_debug_message("destroyed")
 		}
 	}
+	if(place_meeting(x,y,obj_player) or place_meeting(x,y,obj_exit)) {
+		room_restart()
+	}
 }
 

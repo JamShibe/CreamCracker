@@ -5,25 +5,33 @@ if(move_amount <= 0) {
 	yspeed = 0;
 	xspeed = 0;
 	if (keyboard_check(vk_up)) {
-		move_amount = 32;
-		yspeed = -1
+		move_amount = 16;
+		yspeed = -2
 	} else if (keyboard_check(vk_right)) {
-		move_amount = 32;
-		xspeed = 1
+		move_amount = 16;
+		xspeed = 2
 	} else if (keyboard_check(vk_down)) {
-		move_amount = 32;
-		yspeed = 1
+		move_amount = 16;
+		yspeed = 2
 	} else if (keyboard_check(vk_left)) {
-		move_amount = 32;
-		xspeed = -1
+		move_amount = 16;
+		xspeed = -2
+	}
+	if(move_amount == 16) {
+		with(obj_door_flipper) {
+			self.flip()
+		}
+		with(obj_blob) {
+			self.check()
+		}
+	}
+	if (place_meeting(x + xspeed, y + yspeed, obj_wall) and !place_meeting(x,y,obj_door)) {
+		xspeed = 0;
+		yspeed = 0;
 	}
 }
 
-if(move_amount == 32) {
-	with(obj_blob) {
-		self.check()
-	}
-}
+
 
 if(move_amount > 0) {
 	y = y + yspeed;

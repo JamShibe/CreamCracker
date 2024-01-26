@@ -4,10 +4,7 @@
 
 var _player = instance_place(x,y,obj_player)
 if(_player) {
-	if _player.move_amount <= 0 and active == true {
-		with obj_door {
-			self.change()
-		}
-		active = false;
+	if _player.move_amount <= 0 {
+		room_goto_next();
 	}
 }
