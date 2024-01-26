@@ -17,11 +17,21 @@ if(move_amount <= 0) {
 	if(_bad_blob) {
 		if _bad_blob.move_amount == 0 {
 			instance_destroy(_bad_blob)
-			show_debug_message("destroyed")
 		}
 	}
 	if(place_meeting(x,y,obj_player) or place_meeting(x,y,obj_exit)) {
-		room_restart()
+		audio_play_sound(s_death,1, false)
+		if(obj_player) {
+			obj_player.x = -20
+			obj_player.y = -20
+		}
+		if(obj_exit) {
+			instance_destroy(obj_exit)
+		}
+		instance_destroy(obj_exit)
+		var _transition = instance_create_depth(0,0,-999,obj_transition)
+		_transition.to_room = room
+		
 	}
 }
 

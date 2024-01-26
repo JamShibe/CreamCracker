@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"01ef2007-c14c-45c8-8e3c-122f620b56d7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14089e38-2c19-4a92-807d-c7bd8dd1196a",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f4227fc5-c5d5-49de-acdf-c771d743b70b","blendMode":0,"displayName":"default","isLocked":false,"opacity":20.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b7169dd1-51ba-466d-abb4-86d85a31597e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"01ef2007-c14c-45c8-8e3c-122f620b56d7","path":"sprites/spr_exit/spr_exit.yy",},},},"Disabled":false,"id":"4644ad0b-4fba-459f-bd3d-ade8363e9832","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"14089e38-2c19-4a92-807d-c7bd8dd1196a","path":"sprites/spr_exit/spr_exit.yy",},},},"Disabled":false,"id":"bd0e890e-a3d2-4e8b-adf1-89469b0788cc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

@@ -8,6 +8,7 @@ if(_player) {
 		with obj_door {
 			self.change()
 		}
+		audio_play_sound(s_select,1, false)
 		active = false;
 	}
 }
