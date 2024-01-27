@@ -16,7 +16,9 @@ if(keyboard_check_pressed(vk_down) and sprite_index == spr_select_level_selected
 }
 
 if(keyboard_check_pressed(vk_space) and sprite_index == spr_select_level_selected) {
-	show_debug_message("TO DO")
+	audio_play_sound(s_select,1, false)
+	var _transition = instance_create_depth(0,0,-999,obj_transition)
+	_transition.to_room = SelectLevels;
 }
 
 if(cooldown > 0) {

@@ -35,3 +35,27 @@ if(move_amount <= 0) {
 	}
 }
 
+if!(image_index == 9 or image_index == 0) and move_amount == 0 {
+	if((place_meeting(x,y+32,obj_blob)) and (place_meeting(x,y-32,obj_blob)) and (place_meeting(x+32,y,obj_blob)) and (place_meeting(x-32,y,obj_blob))) {
+			image_index = 0;
+	} else if(!(place_meeting(x,y+32,obj_blob)) and (place_meeting(x,y-32,obj_blob)) and !(place_meeting(x+32,y,obj_blob)) and (place_meeting(x-32,y,obj_blob))) {
+			image_index = 2;
+			instance_place(x,y-32,obj_blob).image_index = 0
+			instance_place(x-32,y,obj_blob).image_index = 0
+	} else if((place_meeting(x,y+32,obj_blob)) and !(place_meeting(x,y-32,obj_blob)) and !(place_meeting(x+32,y,obj_blob)) and (place_meeting(x-32,y,obj_blob))) {
+			image_index = 4;
+			instance_place(x,y+32,obj_blob).image_index = 0
+			instance_place(x-32,y,obj_blob).image_index = 0
+	} else if(!(place_meeting(x,y+32,obj_blob)) and (place_meeting(x,y-32,obj_blob)) and (place_meeting(x+32,y,obj_blob)) and !(place_meeting(x-32,y,obj_blob))) {
+			image_index = 1;
+			instance_place(x,y-32,obj_blob).image_index = 0
+			instance_place(x+32,y,obj_blob).image_index = 0
+	} else if((place_meeting(x,y+32,obj_blob)) and !(place_meeting(x,y-32,obj_blob)) and (place_meeting(x+32,y,obj_blob)) and !(place_meeting(x-32,y,obj_blob))) {
+			image_index = 3;
+			instance_place(x,y+32,obj_blob).image_index = 0
+			instance_place(x+32,y,obj_blob).image_index = 0
+	}
+}
+
+
+

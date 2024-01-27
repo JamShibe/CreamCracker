@@ -44,6 +44,9 @@ if(move_amount > 0) {
 
 if(keyboard_check_pressed(vk_escape)) {
 	audio_play_sound(s_death,1, false)
+	if(obj_cam_controller) {
+		instance_destroy(obj_cam_controller)
+	}
 	var _transition = instance_create_depth(0,0,-999,obj_transition)
 	_transition.to_room = Menu
 	instance_destroy()
